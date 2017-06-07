@@ -12,9 +12,9 @@ js=json.loads(urllib2.urlopen(url).read())
 js['explanation']=js['explanation'].split("   ")[0]
 
 from slackclient import SlackClient
-slack_token = "xoxb-193605162912-j5LVCj5erhlsNvd4gpBok0JF"
+slack_token = "xoxb-193605162912-LvckHKGHGaKESgkNeCp7EHMg"
 sc = SlackClient(slack_token)
-sc.api_call(
+output = sc.api_call(
   "chat.postMessage",
   channel="#apod",
   attachments = [{"title": js['title'], \
@@ -24,3 +24,5 @@ sc.api_call(
   text="KV Testing"
 )
 
+if (output["ok"] == False):
+    raise Exception('The slack bot appears to be dead')
