@@ -17,7 +17,7 @@ url="https://api.nasa.gov/planetary/apod?api_key=8frhOuCGozXTd7b8Jp8kfP1g9WguYRc
 js=json.loads(urllib2.urlopen(url).read())
 js['explanation']=js['explanation'].split("   ")[0]
 
-slack_token = "TOKEN_GOES_HERE"
+slack_token = "TOKEN _GOES_HERE"
 
 para = (js['explanation'][:100] + ' ...') if len(js['explanation']) > 100 else js['explanation'][:100] 
 
@@ -41,6 +41,7 @@ sc.api_call(
   "chat.postMessage",
   channel="#apod",
   as_user="true",
+  unfurl_links="false",
   text = (para + " (For full text, click here: https://apod.nasa.gov/apod/ap"+d.strftime("%y%m%d")+".html)")
 )
 
