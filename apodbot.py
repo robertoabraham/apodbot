@@ -1,3 +1,4 @@
+import re
 import urllib2
 import json
 import uuid
@@ -9,14 +10,14 @@ from slackclient import SlackClient
 p = inflect.engine()
 
 d = date.today()            #get today's APOD
-d = datetime.date(2017,6,4) #get a specific day's APOD
+#d = datetime.date(2017,6,4) #get a specific day's APOD
 date_string = d.isoformat() #create nicely formatted dates
 
 url="https://api.nasa.gov/planetary/apod?api_key=8frhOuCGozXTd7b8Jp8kfP1g9WguYRcEcsp3ET5P&date="+date_string
 js=json.loads(urllib2.urlopen(url).read())
 js['explanation']=js['explanation'].split("   ")[0]
 
-slack_token = "xoxb-193605162912-fV5mgy8qA3gDpPLNuWPBaUc9"
+slack_token = "TOKEN_GOES_HERE"
 
 para = (js['explanation'][:100] + ' ...') if len(js['explanation']) > 100 else js['explanation'][:100] 
 
