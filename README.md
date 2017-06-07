@@ -8,7 +8,7 @@ Post the image and text from [apod.nasa.gov](https://apod.nasa.gov) each day to 
 
 ## Usage
 
-This code relies on the following packages: `slackclient`, `urllib2`, `json`, `uuid`, and `datetime`.
+This code relies on the following packages: `slackclient`, `urllib2`, `json`, `uuid`, `re`, and `datetime`.
 
 ## People
 
