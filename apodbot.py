@@ -12,11 +12,12 @@ js=json.loads(urllib2.urlopen(url).read())
 js['explanation']=js['explanation'].split("   ")[0]
 
 from slackclient import SlackClient
-slack_token = "xoxb-193605162912-LvckHKGHGaKESgkNeCp7EHMg"
+slack_token = "xoxb-193605162912-PPDqAs6RRhkeFJNnEcBGBlIu"
 sc = SlackClient(slack_token)
 output = sc.api_call(
   "chat.postMessage",
   channel="#apod",
+  as_user=True,
   attachments = [{"title": js['title'], \
                   "footer": "Scraped from https://apod.nasa.gov/",\
                   "image_url": js['url'], \
