@@ -9,7 +9,6 @@ date_string = "2017-6-5"
 
 url="https://api.nasa.gov/planetary/apod?api_key=8frhOuCGozXTd7b8Jp8kfP1g9WguYRcEcsp3ET5P&date="+date_string
 js=json.loads(urllib2.urlopen(url).read())
-js['explanation']='This is an APOD image. We are awesome!'
 js['explanation']=js['explanation'].split("   ")[0]
 
 from slackclient import SlackClient
