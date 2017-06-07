@@ -4,7 +4,7 @@ Astronomy Picture of the Day Slack Bot
 
 ## Purpose
 
-Post the image and text from [apod.nasa.gov](https://apod.nasa.gov) each day to Slack channel. We acknowledge that several projects already exist that do the same thing, but we wanted to learn now to do it ourselves.
+Post the image and text from [apod.nasa.gov](https://apod.nasa.gov) each day to Slack channel. We acknowledge that several projects already exist that do the same thing, but we wanted to learn how to do it ourselves.
 
 ## Usage
 
@@ -12,7 +12,7 @@ This code relies on the following packages: `slackclient`, `urllib2`, `json`, `u
 
 ## People
 
-This project was a [Dunlap Institute](https://dunlap.utoronto.ca) retreat hack done by led by [Bob Abraham](https://github.com/robertoabraham), [Tina Peters](https://github.com/tinapeters), [Suresh Sivanandam](https://github.com/fudgefactor), [Bryan Gaensler](https://github.com/bgaensler), [Anna O'Grady](https://github.com/AnnaOG), and [Keith Vanderlinde ](https://github.com/kvand).
+This project was a [Dunlap Institute](https://dunlap.utoronto.ca) retreat hack done by [Bob Abraham](https://github.com/robertoabraham), [Suresh Sivanandam](https://github.com/fudgefactor), [Bryan Gaensler](https://github.com/bgaensler), [Anna O'Grady](https://github.com/AnnaOG), [Tina Peters](https://github.com/tinapeters), and [Keith Vanderlinde ](https://github.com/kvand).
 
 ## License, Contributing etc
 
